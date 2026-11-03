@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Logic", "Calculator.Logic\Calculator.Logic.csproj", "{275DE629-19F3-4224-A3AD-28D71A07C7B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests", "Calculator.Tests\Calculator.Tests.csproj", "{18999C59-477A-4E72-A72A-57D3297EF16D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Maui", "Calculator.Maui\Calculator.Maui.csproj", "{72A2A274-7763-460A-865D-842DCB5244CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{275DE629-19F3-4224-A3AD-28D71A07C7B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275DE629-19F3-4224-A3AD-28D71A07C7B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275DE629-19F3-4224-A3AD-28D71A07C7B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275DE629-19F3-4224-A3AD-28D71A07C7B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18999C59-477A-4E72-A72A-57D3297EF16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18999C59-477A-4E72-A72A-57D3297EF16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18999C59-477A-4E72-A72A-57D3297EF16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18999C59-477A-4E72-A72A-57D3297EF16D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A2A274-7763-460A-865D-842DCB5244CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A2A274-7763-460A-865D-842DCB5244CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A2A274-7763-460A-865D-842DCB5244CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A2A274-7763-460A-865D-842DCB5244CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
