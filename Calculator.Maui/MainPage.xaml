@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:Calculator.Maui.ViewModels"
+    x:Class="Calculator.Maui.MainPage"
+    BackgroundColor="#202020">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto, *" RowSpacing="10" Padding="15">
+        
+        <!-- Экран калькулятора -->
+        <Label 
+            Grid.Row="0" 
+            Text="{Binding DisplayText}" 
+            FontSize="48" 
+            TextColor="White" 
+            HorizontalTextAlignment="End" 
+            VerticalTextAlignment="End"
+            Margin="0,20,0,20" />
+
+        <!-- Сетка кнопок -->
+        <Grid 
+            Grid.Row="1" 
+            RowDefinitions="*,*,*,*,*" 
+            ColumnDefinitions="*,*,*,*" 
+            ColumnSpacing="10" 
+            RowSpacing="10">
+
+            <!-- Ряд 1 -->
+            <Button 
+                Grid.Row="0" Grid.Column="0" 
+                Text="C" 
+                Command="{Binding ClearCommand}" 
+                BackgroundColor="#A5A5A5" 
+                TextColor="Black" 
+                FontAttributes="Bold" />
+
+            <Button 
+                Grid.Row="0" Grid.Column="1" 
+                Text="+/-" 
+                BackgroundColor="#A5A5A5" 
+                TextColor="Black" />
+
+            <Button 
+                Grid.Row="0" Grid.Column="2" 
+                Text="%" 
+                BackgroundColor="#A5A5A5" 
+                TextColor="Black" />
+
+            <Button 
+                Grid.Row="0" Grid.Column="3" 
+                Text="÷" 
+                Command="{Binding SetOperationCommand}" 
+                CommandParameter="/" 
+                BackgroundColor="#FF9F0A" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <!-- Ряд 2 -->
+            <Button 
+                Grid.Row="1" Grid.Column="0" 
+                Text="7" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="7" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="1" Grid.Column="1" 
+                Text="8" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="8" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="1" Grid.Column="2" 
+                Text="9" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="9" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="1" Grid.Column="3" 
+                Text="×" 
+                Command="{Binding SetOperationCommand}" 
+                CommandParameter="*" 
+                BackgroundColor="#FF9F0A" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <!-- Ряд 3 -->
+            <Button 
+                Grid.Row="2" Grid.Column="0" 
+                Text="4" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="4" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="2" Grid.Column="1" 
+                Text="5" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="5" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="2" Grid.Column="2" 
+                Text="6" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="6" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="2" Grid.Column="3" 
+                Text="-" 
+                Command="{Binding SetOperationCommand}" 
+                CommandParameter="-" 
+                BackgroundColor="#FF9F0A" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <!-- Ряд 4 -->
+            <Button 
+                Grid.Row="3" Grid.Column="0" 
+                Text="1" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="1" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="3" Grid.Column="1" 
+                Text="2" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="2" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="3" Grid.Column="2" 
+                Text="3" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="3" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="3" Grid.Column="3" 
+                Text="+" 
+                Command="{Binding SetOperationCommand}" 
+                CommandParameter="+" 
+                BackgroundColor="#FF9F0A" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <!-- Ряд 5 -->
+            <Button 
+                Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                Text="0" 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="0" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="4" Grid.Column="2" 
+                Text="," 
+                Command="{Binding EnterDigitCommand}" 
+                CommandParameter="," 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                FontSize="24" />
+
+            <Button 
+                Grid.Row="4" Grid.Column="3" 
+                Text="=" 
+                Command="{Binding ComputeCommand}" 
+                BackgroundColor="#FF9F0A" 
+                TextColor="White" 
+                FontSize="24" />
+
+        </Grid>
+    </Grid>
+</ContentPage>
